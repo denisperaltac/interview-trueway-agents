@@ -4,7 +4,7 @@ Esta entrevista técnica busca evaluar conocimientos básicos acerca de React JS
 ### Paso 1
 En la carpeta src, crea dos nuevos archivos:
 
-1.Home.jsx
+1. Home.jsx
 2. HomeControl.jsx
 
 ### Paso 2
