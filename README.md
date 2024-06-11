@@ -1,21 +1,41 @@
 # Entrevista Técnica Trueway Agents
-
 Esta entrevista técnica busca evaluar conocimientos básicos acerca de React JS y CSS.
 
-Paso 1: En la carpeta src crear dos nuevos archivos: - Home.jsx - HomeControl.jsx
+## Paso 1
+En la carpeta src, crea dos nuevos archivos:
 
-Paso 2: En HomeControl.jsx deberemos crear un componente que contenga una funcion que realice una llamada al siguiente endpoint: "https://test.truewayrealtorsapi.com/getListing"
-Esta llamada se realizara una vez al iniciar el componente y deberá incluir una query llamada "ListingId" y su valor debe ser almacenado en un Estado denominado "listingId" cuyo valor inicial sera: "RX-12346123|2"
-Luego de realizar la llamada se debera pasar la respuesta a un nuevo estado denominado properties.
-Además deberemos manejar el error por consola y setear el estado de properties a su valor inicial.
-Por último deberemos retornar el componente Home.jsx y pasarle como parametro el estado que contiene nuestras propiedades.
+1.Home.jsx
+2. HomeControl.jsx
 
-Paso 3: En Home.jsx deberemos crear un componente que contenga el titulo "Mis Propiedades" seguido de una tabla en la cual mostraremos 4 columnas que seran las siguientes:
+## Paso 2
+En HomeControl.jsx:
 
-Images - Precio - Baños - Dormitorios y sus valores serán respectivamente: {properties.images.L[0].M.link.S} {properties.OriginalListPrice.N} {properties.BathroomsFull.N} {properties.BedroomsTotal.N}
+1. Crea un componente que contenga una función que realice una llamada al siguiente endpoint: https://test.truewayrealtorsapi.com/getListing.
+2. La llamada se realizará una vez al iniciar el componente y deberá incluir una query llamada ListingId.
+3. El valor inicial de ListingId será almacenado en un estado denominado listingId con el valor inicial: "RX-12346123|2".
+4. Después de realizar la llamada, guarda la respuesta en un nuevo estado denominado properties.
+5. Maneja cualquier error imprimiéndolo en la consola y reseteando el estado properties a su valor inicial.
+6. Retorna el componente Home.jsx y pásale como parámetro el estado que contiene nuestras propiedades.
 
-Paso 4: Agreramos un input de tipo texto el cual deberá modificar el valor de nuestro estado "listingId" seguido de un botón que ejecutará nuestra funcion para obtener propiedades. El boton deberá estar deshabilitado si el valor del largo de listingId es menor a 3.
+## Paso 3
+En Home.jsx:
 
-Paso 5: En caso de introducir un valor incorrecto para listingId y ejecutar la función para buscar propiedades, deberemos manejar el error relizando un renderizado condicional de nuestra tabla y en caso de que no venga ninguna propiedad en nuestro llamado deberemos mostrar un mensaje de error como por ejemplo "No pudimos encontrar ninguna propiedad con el siguiente listingId ."
+1.Crea un componente que contenga el título "Mis Propiedades".
+2. Añade una tabla con 4 columnas:
+Images - {properties.images.L[0].M.link.S}
+Precio - {properties.OriginalListPrice.N}
+Baños - {properties.BathroomsFull.N}
+Dormitorios - {properties.BedroomsTotal.N}
 
-Paso 6: Utilizar estilos css en linea para mejorar el aspecto general de nuestro componente.
+Paso 4
+1. Añade un input de tipo texto que modifique el valor del estado listingId.
+2. Añade un botón que ejecutará la función para obtener propiedades.
+3. El botón deberá estar deshabilitado si el valor de la longitud de listingId es menor a 3.
+
+Paso 5
+1. Si se introduce un valor incorrecto para listingId y se ejecuta la función para buscar propiedades, maneja el error realizando un renderizado condicional de la tabla.
+2. Si no se encuentra ninguna propiedad con el listingId proporcionado, muestra un mensaje de error como: "No pudimos encontrar ninguna propiedad con el siguiente listingId."
+   
+Paso 6
+Utiliza estilos CSS en línea para mejorar el aspecto general de tu componente.
+
