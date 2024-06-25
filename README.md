@@ -13,7 +13,7 @@ En HomeControl.jsx:
 1. Crea un componente que contenga una función que realice una llamada al siguiente endpoint: https://test.truewayrealtorsapi.com/getListing.
 2. La llamada se realizará una vez al iniciar el componente y deberá incluir una query llamada ListingId.
 3. El valor inicial de ListingId será almacenado en un estado denominado listingId con el valor inicial: "RX-12346123|2".
-4. Después de realizar la llamada, guarda la respuesta en un nuevo estado denominado properties.
+4. Después de realizar la llamada, guarda la respuesta (res.data.listing.Item) en un nuevo estado denominado properties.
 5. Maneja cualquier error imprimiéndolo en la consola y reseteando el estado properties a su valor inicial.
 6. Retorna el componente Home.jsx y pásale como parámetro el estado que contiene nuestras propiedades.
 
